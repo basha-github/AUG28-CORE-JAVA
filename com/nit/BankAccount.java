@@ -1,20 +1,13 @@
 package com.nit;
 
-public class BankAccount {
-
+abstract public class BankAccount {
 	// relations
 	// IS
 	// have
-	
 	String accNo;
 	int balance;
 	String name;
 	Address address;
-	
-	
-	
-
-	
 	public BankAccount(String accNo, int balance, String name,
 			Address address) {
 		super();
@@ -24,19 +17,9 @@ public class BankAccount {
 		this.address = address;
 	}
 
-	void deposit(int amount) {
-		
-		balance = balance + amount;
-		System.out.println("Successfully deposited Amount...."+amount);
-		
-	}
+	abstract void deposit(int amount);
 	
-	void withDraw(int amt) {
-		
-		balance = balance - amt;
-		System.out.println("Successfully withdrawn amount....."+amt);
-	}
-	
+	abstract void withDraw(int amt);
 	void checkbalance() {
 		
 		System.out.println("From Account.."+name+"..Current Available Balance--->"+balance);
