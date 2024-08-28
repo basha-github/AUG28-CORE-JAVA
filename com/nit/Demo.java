@@ -3,20 +3,20 @@ package com.nit;
 import java.util.Scanner;
 
 public class Demo {
-	
 	static void menu() {
 		System.out.println("1.Deposit");
 		System.out.println("2.withDraw");
 		System.out.println("3.Check Balance");
 		System.out.println("please enter opt");
-		
 	}
 
 	public static void main(String[] args) {
 		
-		SBIAccount johnAcc = new SBIAccount("190876",5000,"John"); 
+		SBIAccount johnAcc = new SBIAccount("190876",5000,"John",
+				new Address("MG Road","HYD","TS","500001")); 
 		Scanner sc = new Scanner(System.in);
 		do{
+			
 			menu();	
 			int opt = sc.nextInt();
 			if(opt ==1) {
